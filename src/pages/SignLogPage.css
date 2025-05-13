@@ -1,0 +1,382 @@
+/* src/pages/SignLogPage.css */
+
+.signup-container {
+  max-width: 25rem;
+  margin: 3rem auto;
+  padding: 1.25rem;
+  background-color: rgba(249, 249, 249, 0.14);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-container form input {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc; 
+  border-radius: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  align-self: center;
+  width: 90%;
+}
+
+.signup-container form input:focus-visible {
+  outline: 2px solid #4CAF50;
+  border-color: #4CAF50;
+}
+
+.signup-container form button {
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: 60%;
+}
+
+.signup-container form button:hover {
+  background-color: #45a049;
+}
+
+.signup-container .redirect {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.signup-container .redirect span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.signup-container .redirect span:hover {
+  text-decoration: underline;
+}
+
+/* Mobile optimization */
+@media (max-width: 350px) {
+  .signup-container {
+    padding: 1rem;
+  }
+
+  .signup-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .signup-container form input {
+    font-size: 0.875rem;
+  }
+
+  .signup-container form button {
+    width: 80%;
+  }
+}
+/* src/pages/SignLogPage.css */
+/* Login container styles */
+.login-container {
+  position: absolute; /* Using absolute positioning */
+  top: 50%;           /* Centering vertically */
+  left: 50%;          /* Centering horizontally */
+  transform: translate(-50%, -50%); /* Offsetting by 50% of its own width and height to truly center */
+  max-width: 35rem;   /* Adjusted width */
+  width: 100%;        /* Ensure it takes the full width available within the max-width */
+  padding: 2rem;      /* Adjusted padding to make it more spacious but not overwhelming */
+  background-color: rgba(249, 249, 249, 0.14);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Makes padding count within the width */
+}
+
+/* Heading for login */
+.login-container h2 {
+  text-align: center;
+  font-size: 2rem; /* Increased font size for a more prominent heading */
+  margin-bottom: 1.5rem; /* Increased margin for spacing */
+}
+
+/* Form styles */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to center */
+}
+
+/* Input styles */
+.login-container form input {
+  padding: 1rem;
+  margin-bottom: 1.25rem; /* Increased margin for more space between inputs */
+  border: 1px solid #ccc; /* Slightly darker for better contrast */
+  border-radius: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  align-self: center; /* Stretch input to fill the width */
+  width: 100%;
+}
+
+/* Input focus styles */
+.login-container form input:focus-visible {
+  outline: 2px solid #4CAF50;
+  border-color: #4CAF50;
+}
+
+/* Button styles */
+.login-container form button {
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 60%;
+  margin-top: 1rem;
+}
+
+.login-container form button:hover {
+  background-color: #45a049;
+}
+
+/* Redirect link styles */
+.login-container .redirect {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.login-container .redirect span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-container .redirect span:hover {
+  text-decoration: underline;
+}
+
+/* Mobile optimization */
+@media (max-width: 450px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .login-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .login-container form input {
+    font-size: 1rem;
+  }
+
+  .login-container form button {
+    width: 80%;
+  }
+}
+
+/* Notification styles */
+.notification {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it appears on top */
+  opacity: 0;
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Notification fade-out effect */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Mobile optimization for notification */
+@media (max-width: 600px) {
+  .notification {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+
+/*Workplace*/
+.dashboard-container {
+  padding: 30px;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-logo {
+  font-size: 32px;
+  color: #ededf4;
+  font-weight: bold;
+}
+
+.dashboard-profile {
+  font-size: 16px;
+  color: #555;
+}
+
+.dashboard-greeting h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.dashboard-greeting p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+}
+
+.dashboard-card {
+  background-color: #fff;
+  flex: 1 1 250px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: #4a4ae6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.mark {
+  border-left: 5px solid #4a90e2;
+}
+
+.report {
+  border-left: 5px solid #50e3c2;
+}
+
+.ai {
+  border-left: 5px solid #f55c47;
+}
+
+
+/*MArk Attendance*/.mark-container {
+  position: relative; /* Allows positioning context */
+  max-width: 35rem;  /* Consistent max width */
+  width: 100%;       /* Ensures full width within max-width */
+  margin: 40px auto; /* Centers it on the page */
+  background-color: rgba(249, 249, 249, 0.14); /* Slightly translucent background */
+  padding: 2rem;      /* Padding for spaciousness */
+  border-radius: 0.75rem;  /* Rounded corners */
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-sizing: border-box;  /* Includes padding within width */
+}
+
+/* Heading for mark-container */
+.mark-container h2 {
+  text-align: center;
+  font-size: 2rem; /* Larger heading */
+  margin-bottom: 1.5rem; /* Increased margin for spacing */
+  font-weight: bold;
+  color: #ffffff; /* Slightly darker color for emphasis */
+}
+
+/* Form styles */
+.mark-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form inputs */
+}
+
+/* Input and button styles */
+.mark-container form input,
+.mark-container form button {
+  margin: 1rem 0;    /* Increased margin for separation */
+  padding: 1rem;     /* Padding inside the inputs and button */
+  border-radius: 1rem;  /* Rounded corners */
+  border: 1px solid #ccc; /* Lighter border for input fields */
+  font-size: 1rem;   /* Consistent font size */
+  width: 100%;       /* Ensure full width */
+  box-sizing: border-box; /* Includes padding in width */
+}
+
+/* Button specific styles */
+.mark-container button {
+  background-color: #4a4ae6; /* Bold blue background */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center; /* Center the button text */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.mark-container button:hover {
+  background-color: #3b3be0; /* Darken on hover */
+}
+
+/* Result box styles */
+.result-box {
+  margin-top: 30px;
+  background: #f5f5f5; /* Subtle gray background */
+  padding: 1rem; /* Padding for content */
+  border-radius: 0.75rem; /* Rounded corners */
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
