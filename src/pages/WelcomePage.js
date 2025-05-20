@@ -1,4 +1,3 @@
-// src/pages/WelcomePage.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./WelcomePage.css";
@@ -14,24 +13,25 @@ function WelcomePage() {
           <span>Regis.AI</span>
         </div>
         <div className="auth-buttons">
-          <button onClick={() => navigate("/login")}>Login</button>
-          <button onClick={() => navigate("/signup")}>Sign Up</button>
+          <button onClick={() => navigate("/know-more")}>Know More</button>
+          <button onClick={() => navigate("/developers")}>Meet the Developers</button>
         </div>
       </header>
 
       <main className="main-content">
         <div className="tagline">
           <h2>Revolutionizing Attendance with Intelligence</h2>
-          <p>From Pen To Presence. Seamless check-ins. Face the future.</p>
-         <button onClick={() => navigate("/login")}> Get Started → </button>
-
+          <p>
+            From Pen To Presence. Seamless check-ins. Face the future.
+          </p>
+          <button onClick={() => navigate("/Workplace")}>Get Started →</button>
         </div>
 
         <div className="featured-images">
-          <img src="/face1.jpg" alt="Sample Face 1" />
-          <img src="/face2.jpg" alt="Sample Face 2" />
-          <img src="/face3.jpg" alt="Sample Face 3" />
-          <img src="/face4.jpg" alt="Sample Face 4" />
+          <img src="/face_pic/face1.jpg" alt="Sample Face 1" />
+          <img src="/face_pic/face2.jpg" alt="Sample Face 2" />
+          <img src="/face_pic/face3.jpg" alt="Sample Face 3" />
+          <img src="/face_pic/face4.jpg" alt="Sample Face 4" />
         </div>
       </main>
     </div>

@@ -1,16 +1,16 @@
-/* Global Styles */
+/* =================== GLOBAL STYLES =================== */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0a192f; /* Navy blue */
-  color: #ffffff; /* White text */
+  background: #0a192f;
+  color: #ffffff;
 }
 
 button {
   padding: 12px 25px;
-  background-color: #64ffda; /* Accent */
-  color: #0a192f; /* Navy text */
+  background-color: #1976d2;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -22,7 +22,6 @@ button {
 }
 
 button:hover {
-  background-color: #52e0c4; /* Accent hover */
   transform: translateY(-4px);
 }
 
@@ -49,7 +48,6 @@ input[type="file"]:hover {
   background-color: #f0f0f0;
 }
 
-/* Container */
 .container {
   max-width: 500px;
   margin: 100px auto;
@@ -68,7 +66,6 @@ input[type="file"]:hover {
   transform: scale(1.02);
 }
 
-/* Header */
 h1 {
   font-size: 28px;
   margin-bottom: 30px;
@@ -81,12 +78,10 @@ h1 {
   .container {
     padding: 30px;
   }
-
   button {
     width: 180px;
     font-size: 0.9rem;
   }
-
   input, .upload-section input[type="file"] {
     width: 220px;
   }
@@ -96,13 +91,803 @@ h1 {
   .container {
     padding: 20px;
   }
-
   button {
     width: 150px;
     font-size: 0.8rem;
   }
-
   input, .upload-section input[type="file"] {
     width: 200px;
   }
 }
+
+/* =================== SIGNUP & LOGIN PAGE STYLES =================== */
+.signup-container {
+  max-width: 25rem;
+  margin: 3rem auto;
+  padding: 1.25rem;
+  background-color: rgba(249, 249, 249, 0.14);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2,
+.login-container h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.signup-container form,
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-container form input,
+.login-container form input {
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-container form button,
+.login-container form button {
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 60%;
+  margin-top: 1rem;
+}
+
+.signup-container form button:hover,
+.login-container form button:hover {
+  background-color: #45a049;
+}
+
+.signup-container .redirect,
+.login-container .redirect {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.signup-container .redirect span,
+.login-container .redirect span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.signup-container .redirect span:hover,
+.login-container .redirect span:hover {
+  text-decoration: underline;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 35rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(249, 249, 249, 0.14);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-container form input:focus-visible {
+  outline: 2px solid #4CAF50;
+  border-color: #4CAF50;
+}
+
+@media (max-width: 450px) {
+  .signup-container,
+  .login-container {
+    padding: 1.5rem;
+  }
+  .signup-container h2,
+  .login-container h2 {
+    font-size: 1.5rem;
+  }
+  .signup-container form input,
+  .login-container form input {
+    font-size: 1rem;
+  }
+  .signup-container form button,
+  .login-container form button {
+    width: 80%;
+  }
+}
+
+/* Notification styles */
+.notification {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .notification {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* =================== WORKPLACE DASHBOARD PAGE STYLES =================== */
+.dashboard-container {
+  padding: 30px;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-logo {
+  font-size: 32px;
+  color: #ededf4;
+  font-weight: bold;
+}
+
+.dashboard-greeting h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: #4a4ae6;
+}
+
+.dashboard-greeting p {
+  color: #fff;
+}
+
+.dashboard-greeting p span {
+  color: #f55c47;
+  font-weight: 600;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.dashboard-card {
+  background: #fff;
+  color: #222;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(76, 74, 230, 0.08);
+  padding: 2.2rem 1.7rem 2rem 1.7rem;
+  min-width: 270px;
+  max-width: 340px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+  border-left: 6px solid #4a4ae6;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 16px 40px rgba(76, 74, 230, 0.18);
+  transform: translateY(-8px) scale(1.03);
+}
+
+.dashboard-card .card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1.1rem;
+}
+
+.dashboard-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  color: #4a4ae6;
+}
+
+.dashboard-card p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .dashboard-card {
+    width: 90%;
+    min-width: unset;
+    max-width: unset;
+  }
+}
+
+/* =================== MARK ATTENDANCE PAGE STYLES =================== */
+.mark-container {
+  position: relative;
+  max-width: 35rem;
+  width: 100%;
+  margin: 40px auto;
+  background-color: rgba(249, 249, 249, 0.14);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.mark-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.mark-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mark-container form input,
+.mark-container form button {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mark-container button {
+  background-color: #4a4ae6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.mark-container button:hover {
+  background-color: #3b3be0;
+}
+
+.dynamic-result-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.result-box {
+  background: linear-gradient(135deg, #f5f5f5 60%, #e0e7ff 100%);
+  padding: 1.5rem 1.25rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 1rem rgba(76, 74, 230, 0.08);
+  min-width: 260px;
+  max-width: 350px;
+  flex: 1 1 260px;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+  color: #222;
+}
+
+.result-box:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0.5rem 2rem rgba(76, 74, 230, 0.15);
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.result-header h3 {
+  color: #4a4ae6;
+}
+
+.copy-btn {
+  background: #4a4ae6;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background: #222;
+}
+
+.roll-box { border-left: 5px solid #4a90e2; }
+.text-box { border-left: 5px solid #f55c47; }
+
+.result-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result-box li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #e0e7ff;
+  font-size: 1.05rem;
+}
+
+.result-box li:last-child {
+  border-bottom: none;
+}
+
+.copied-msg {
+  color: #4a4ae6;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  font-size: 0.98rem;
+  transition: opacity 0.2s;
+}
+
+.gehu-erp-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  background: #f55c47;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.9rem 2.2rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 0.25rem 1rem rgba(245, 92, 71, 0.08);
+  transition: background 0.2s, transform 0.2s;
+  width: fit-content;
+}
+
+.gehu-erp-btn:hover {
+  background: #d9442f;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.summary-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  background: linear-gradient(90deg, #e0e7ff 60%, #f5f5f5 100%);
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(76, 74, 230, 0.08);
+  padding: 1rem 2rem;
+  margin: 2rem auto 1.5rem auto;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #222;
+  max-width: 600px;
+}
+
+.summary-bar span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.parallel-results-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.action-btns-row {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.action-btns-row .gehu-erp-btn {
+  margin: 0;
+  min-width: 220px;
+  text-align: center;
+}
+
+.attendance-msg-box {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  background: linear-gradient(135deg, #e0e7ff 60%, #f5f5f5 100%);
+  border-left: 5px solid #4a4ae6;
+}
+
+/* =================== DEVELOPERS PAGE STYLES =================== */
+
+.developers-container {
+  max-width: 1000px;
+  margin: 60px auto 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 25px rgba(25, 118, 210, 0.10);
+  text-align: center;
+}
+
+.developers-title {
+  color: #1976d2;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.developers-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.developer-card {
+  background: #f5f5f5;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(25,118,210,0.08);
+  padding: 1.5rem 1.2rem;
+  min-width: 460px;      /* Increased from 200px */
+  max-width: 320px;      /* Increased from 220px */
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.developer-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(25,118,210,0.16);
+}
+
+.developer-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #1976d2;
+}
+
+.developer-name {
+  margin: 0.5rem 0 0.2rem 0;
+  color: #1976d2;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.developer-role {
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .developers-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .developers-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .developers-container {
+    padding: 1rem;
+  }
+}
+
+/* =================== MONTHLY SUMMARIZER PAGE STYLES =================== */
+
+.mark-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(76, 74, 230, 0.10);
+  padding: 2.5rem 2rem;
+  color: #222;
+}
+
+.mark-container h2 {
+  text-align: center;
+  color: #1976d2;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 2.1rem;
+}
+
+
+.mark-container button {
+  background-color: #1976d2;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+  min-width: 180px;
+}
+
+.mark-container button:hover {
+  background-color: #125ea2;
+}
+
+.summary-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: #e3f2fd;
+  color: #1976d2;
+  font-weight: 500;
+  border-radius: 0.8rem;
+  max-width: 700px;
+  font-size: 1.1rem;
+  margin: 1.5rem auto 1rem auto;
+  padding: 1rem 2rem;
+}
+
+.summary-bar span {
+  margin: 0 0.5rem;
+}
+
+.result-box {
+  background: #f8fafc;
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(76, 74, 230, 0.06);
+  padding: 1.5rem 1.25rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-box table {
+  width: 60%;
+  min-width: 800px;
+  border-collapse: collapse;
+  font-size: 1.08rem;
+  background: #fff;
+}
+
+.result-box th, .result-box td {
+  padding: 14px 12px;     /* More padding for clarity */
+  text-align: left;
+  word-break: break-word; /* Prevents overflow */
+  max-width: 220px;       /* Prevents columns from being too wide */
+}
+
+.result-box th {
+  background: #e3f2fd;
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 1.08rem;
+}
+
+.result-box tr {
+  transition: background 0.2s;
+}
+
+.result-box tr:nth-child(even) {
+  background: #f5faff;
+}
+
+.result-box tr.debarred-row {
+  background: #ffeaea !important;
+}
+
+.result-box td {
+  border-bottom: 1px solid #e0e7ff;
+}
+
+.result-box td:last-child {
+  border-bottom: none;
+}
+
+/* Copy All, Export, and Generate Message buttons below the table */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin: 1.5rem 0 0 0;
+}
+
+.button-group button {
+  min-width: 150px;
+  border-radius: 8px;
+  font-weight: 600;
+  background: #1976d2;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.button-group .gehu-erp-btn {
+  background: #f55c47;
+}
+
+.button-group .gehu-erp-btn:hover {
+  background: #d9442f;
+}
+
+.button-group button:hover {
+  background: #125ea2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .result-box {
+    max-width: 98vw;
+    padding: 1rem 0.5rem;
+  }
+  .result-box table {
+    min-width: 700px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .result-box table {
+    min-width: 500px;
+    font-size: 0.95rem;
+  }
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+}
+
+.developer-mail {
+  font-size: 0.98rem;
+  color: #1976d2;
+  margin-bottom: 0.3rem;
+  word-break: break-all;
+}
+
+/* =================== HELP PAGE STYLES =================== */
+
+.help-main-container {
+  max-width: 700px;
+  margin: 60px auto 0 auto;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 25px rgba(25, 118, 210, 0.10);
+  padding: 2.5rem 2rem;
+  color: #222;
+}
+
+.help-title {
+  text-align: center;
+  color: #1976d2;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-size: 2.1rem;
+}
+
+.faq-box {
+  border: 2px solid #1976d2;
+  border-radius: 1rem;
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 2rem;
+  background: #f8fafc;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.04);
+}
+
+.faq-question {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: #1976d2;
+}
+
+.faq-steps {
+  margin: 0 0 0 1.2rem;
+  padding: 0;
+  color: #333;
+}
+
+.faq-steps li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+.faq-answer {
+  margin: 0 0 0 1.2rem;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+.highlight {
+  color: #f55c47;
+  font-weight: bold;
+}
+
+.help-contact {
+  margin-top: 2.5rem;
+  text-align: center;
+  color: #1976d2;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .help-main-container {
+    padding: 1.2rem 0.5rem;
+  }
+  .faq-box {
+    padding: 1rem 0.5rem;
+  }
+}
+
