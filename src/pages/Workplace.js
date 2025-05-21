@@ -4,8 +4,6 @@ import "../App.css";
 
 function AttendanceDashboardPage() {
   const navigate = useNavigate();
-
-  // Card data
   const cards = [
     {
       key: "mark",
@@ -24,9 +22,9 @@ function AttendanceDashboardPage() {
     {
       key: "ai",
       icon: "🤖",
-      title: "AttendIQ", // Changed from "AI Anomaly"
-      desc: "Leverage advanced AI analytics to detect irregularities and ensure data integrity. Smarter, safer insights at your fingertips.", // Rephrased description
-      route: "/attendiq" // Changed route to "/attendiq"
+      title: "AttendIQ", 
+      desc: "Leverage advanced AI analytics to detect irregularities and ensure data integrity. Smarter, safer insights at your fingertips.", 
+      route: "/attendiq"
     }
   ];
 

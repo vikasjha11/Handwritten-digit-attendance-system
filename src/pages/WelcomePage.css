@@ -1,4 +1,3 @@
-/* Global Styles */
 body, html {
   height: 100%;
   margin: 0;
@@ -11,19 +10,17 @@ body, html {
   line-height: 1.5;
 }
 
-/* Container */
 .welcome-container {
   width: 100%;
   padding: 2rem 3rem;
   box-sizing: border-box;
-  height: 100vh; /* Ensures the container spans the full height of the viewport */
+  height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px; /* Add some gap between sections */
+  gap: 30px; 
 }
 
-/* Header */
 .header {
   width: 100%;
   display: flex;
@@ -65,17 +62,15 @@ body, html {
   transform: scale(1.05);
 }
 
-/* Main Hero Content */
 .main-content {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Ensures both tagline and images stretch to the full height */
+  align-items: stretch; 
   gap: 40px;
   width: 100%;
-  height: 100%; /* Make sure it takes up the full screen height */
+  height: 100%;
 }
 
-/* Left: Tagline - 30% */
 .tagline {
   flex: 0 0 30%;
   max-width: 30%;
@@ -116,12 +111,12 @@ body, html {
   transform: scale(1.05);
 }
 
-/* Right: Featured Images - 70% inline */
+
 .featured-images {
   flex: 0 0 70%;
   max-width: 70%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
   justify-items: center;
   background: transparent;
@@ -129,7 +124,7 @@ body, html {
   box-shadow: none;
   border-radius: 0;
   color: inherit;
-  align-items: stretch; /* Ensure images stretch to fill height */
+  align-items: stretch; 
 }
 
 .featured-images h2 {
@@ -142,13 +137,12 @@ body, html {
 
 .featured-images img {
   width: 100%;
-  height: 300px; /* Increase height to make images fill more space */
+  height: 300px; 
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* Responsive Layouts */
 @media (max-width: 1024px) {
   .main-content {
     flex-direction: column;
@@ -182,10 +176,10 @@ body, html {
   }
 
   .featured-images {
-    grid-template-columns: 1fr; /* Stack images on small screens */
+    grid-template-columns: 1fr; 
   }
 
   .featured-images img {
-    height: 200px; /* Slightly smaller images on smaller screens */
+    height: 200px; 
   }
 }

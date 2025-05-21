@@ -4,11 +4,7 @@ import "../App.css";
 
 function MonthlySummarizerPage() {
   const [form, setForm] = useState({
-    className: "",
-    section: "",
-    month: "",
-    debarPercent: 75,
-  });
+    className: "",section: "",month: "",debarPercent: 75,});
   const [image, setImage] = useState(null);
   const [detailedResults, setDetailedResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -26,12 +22,10 @@ function MonthlySummarizerPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!image || !form.className || !form.section || !form.month || !form.debarPercent) {
       alert("Please fill all fields and upload an image.");
       return;
     }
-
     const data = new FormData();
     data.append("file", image);
     data.append("className", form.className);

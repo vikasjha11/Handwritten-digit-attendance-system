@@ -8,7 +8,7 @@ body, html {
 }
 
 button {
-  padding: 12px 25px;
+  padding: 8px 25px;
   background-color: #1976d2;
   color: #ffffff;
   border: none;
@@ -79,7 +79,7 @@ h1 {
     padding: 30px;
   }
   button {
-    width: 180px;
+    width: 10px;
     font-size: 0.9rem;
   }
   input, .upload-section input[type="file"] {
