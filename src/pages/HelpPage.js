@@ -12,7 +12,7 @@ function HelpPage() {
         <ol className="faq-steps">
           <li>Go to the Mark Attendance page from your dashboard.</li>
           <li>Enter your class, section, and date information.</li>
-          <li>Upload a clear image of your handwritten attendance sheet.</li>
+          <li>Upload a clear image of your attendance sheet.</li>
           <li>Click "Upload & Extract" to let the AI read the sheet.</li>
           <li>
             The system will extract roll numbers and/or names. You can copy the results, generate an attendance message, or directly mark attendance on GEHU ERP.
