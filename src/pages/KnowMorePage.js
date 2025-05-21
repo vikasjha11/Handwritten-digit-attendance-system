@@ -6,16 +6,16 @@ function KnowMorePage() {
     <div className="knowmore-main-container">
       <h2 className="knowmore-title">Why Choose Regis.AI?</h2>
       <p className="knowmore-subtitle">
-        Regis.AI revolutionizes attendance management for schools, colleges, and organizations. Our AI-powered system transforms handwritten sheets into digital records—fast, accurate, and effortless.
+        Regis.AI revolutionizes attendance management for schools, colleges, and organizations. Our AI-powered system transforms sheets into digital records—fast, accurate, and effortless.
       </p>
 
       <div className="knowmore-features-section">
         <div className="knowmore-feature-box">
-          <img src="promo_pics/first.jpg" alt="Upload Handwritten Sheet" />
+          <img src="promo_pics/first.jpg" alt="Upload Sheet" />
           <div>
-            <h4>📝 Handwritten to Digital</h4>
+            <h4>📝 Paper to Digital</h4>
             <p>
-              <b>Advantage:</b> No more manual data entry! Simply upload your handwritten attendance sheet and Regis.AI will instantly convert it into a digital record. This saves hours of tedious work, reduces human error, and ensures your records are always organized and accessible.
+              <b>Advantage:</b> No more manual data entry! Simply upload your attendance sheet and Regis.AI will instantly convert it into a digital record. This saves hours of tedious work, reduces human error, and ensures your records are always organized and accessible.
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ function KnowMorePage() {
           <div className="workflow-step">
             <div className="workflow-step-label">Step 2</div>
             <div className="workflow-step-desc">
-              Upload a clear image of your handwritten attendance sheet.
+              Upload a clear image of your attendance sheet.
             </div>
           </div>
           <div className="workflow-connector"></div>
