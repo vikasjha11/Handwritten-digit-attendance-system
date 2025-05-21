@@ -1,34 +1,100 @@
 import React from "react";
-import "./WelcomePage.css";
+import "../App.css";
 
 function KnowMorePage() {
   return (
-    <div className="container" style={{ maxWidth: 900, marginTop: 60 }}>
-      <h2 style={{ color: "#1976d2" }}>Why Regis.AI?</h2>
-      <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
-        Regis.AI is transforming the way attendance is managed in schools, colleges, and businesses. Our AI-powered handwritten attendance system is fast, accurate, and effortless.
+    <div className="knowmore-main-container">
+      <h2 className="knowmore-title">Why Choose Regis.AI?</h2>
+      <p className="knowmore-subtitle">
+        Regis.AI revolutionizes attendance management for schools, colleges, and organizations. Our AI-powered system transforms handwritten sheets into digital records—fast, accurate, and effortless.
       </p>
-      <div className="main-content">
-        <div className="tagline" style={{ maxWidth: 400 }}>
-          <h3>Features:</h3>
-          <ul style={{ fontSize: "1.1rem", textAlign: "left" }}>
-            <li>✔️ Upload handwritten sheets, get digital attendance instantly</li>
-            <li>✔️ No manual entry, no errors</li>
-            <li>✔️ Works for teachers, students, and admins</li>
-            <li>✔️ Secure, private, and easy to use</li>
-            <li>✔️ Analytics and reporting for better insights</li>
-          </ul>
-          <p style={{ marginTop: "1.5rem", color: "#f55c47", fontWeight: 600 }}>
-            Join 10,000+ users who trust Regis.AI for their attendance needs!
-          </p>
+
+      <div className="knowmore-features-section">
+        <div className="knowmore-feature-box">
+          <img src="promo_pics/first.jpg" alt="Upload Handwritten Sheet" />
+          <div>
+            <h4>📝 Handwritten to Digital</h4>
+            <p>
+              <b>Advantage:</b> No more manual data entry! Simply upload your handwritten attendance sheet and Regis.AI will instantly convert it into a digital record. This saves hours of tedious work, reduces human error, and ensures your records are always organized and accessible.
+            </p>
+          </div>
         </div>
-        <div className="featured-images" style={{ maxWidth: 400 }}>
-          <img src="/face1.jpg" alt="AI Attendance Example 1" />
-          <img src="/face2.jpg" alt="AI Attendance Example 2" />
+        <div className="knowmore-feature-box">
+          <img src="/face_pic/face2.jpg" alt="AI Extraction Result" />
+          <div>
+            <h4>⚡ AI-Powered Extraction</h4>
+            <p>
+              <b>Advantage:</b> Our advanced OCR technology accurately extracts roll numbers and names—even from complex or messy handwriting. This means you get reliable, fast results every time, regardless of writing style or sheet format.
+            </p>
+          </div>
+        </div>
+        <div className="knowmore-feature-box">
+          <img src="/face_pic/face3.jpg" alt="Monthly Summary Example" />
+          <div>
+            <h4>📊 Monthly Summarizer</h4>
+            <p>
+              <b>Advantage:</b> Automatically generate monthly attendance summaries, identify debarred students, and export results in one click. This helps you track attendance trends, comply with institutional policies, and communicate efficiently with students.
+            </p>
+          </div>
+        </div>
+        <div className="knowmore-feature-box">
+          <img src="/promo_pics/fourth.jpg" alt="AttendIQ Insights" />
+          <div>
+            <h4>🤖 AttendIQ Insights</h4>
+            <p>
+              <b>Advantage:</b> AttendIQ analyzes your attendance data to detect anomalies, spot trends, and provide actionable insights. Instantly identify students with low attendance, frequent medical leaves, or unusual patterns—empowering you to take timely action.
+            </p>
+          </div>
         </div>
       </div>
-      <div style={{ marginTop: "2rem", textAlign: "center" }}>
-        <button style={{ background: "#1976d2", color: "#ffff" }} onClick={() => window.location.href = "/"}>Back to Home</button>
+
+      <div className="knowmore-workflow-section">
+        <h3>How It Works</h3>
+        <div className="workflow-stepper">
+          <div className="workflow-step">
+            <div className="workflow-step-label">Step 1</div>
+            <div className="workflow-step-desc">
+              Select your class, section, and date.
+            </div>
+          </div>
+          <div className="workflow-connector"></div>
+          <div className="workflow-step">
+            <div className="workflow-step-label">Step 2</div>
+            <div className="workflow-step-desc">
+              Upload a clear image of your handwritten attendance sheet.
+            </div>
+          </div>
+          <div className="workflow-connector"></div>
+          <div className="workflow-step">
+            <div className="workflow-step-label">Step 3</div>
+            <div className="workflow-step-desc">
+              Let our AI extract roll numbers and names automatically.
+            </div>
+          </div>
+          <div className="workflow-connector"></div>
+          <div className="workflow-step">
+            <div className="workflow-step-label">Step 4</div>
+            <div className="workflow-step-desc">
+              Review, copy, or export the results. Generate attendance messages or mark directly on GEHU ERP.
+            </div>
+          </div>
+          <div className="workflow-connector"></div>
+          <div className="workflow-step">
+            <div className="workflow-step-label">Step 5</div>
+            <div className="workflow-step-desc">
+              Use Monthly Summarizer and AttendIQ for deeper analytics and anomaly detection.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="knowmore-cta">
+        <p>
+          <b style={{ color: "#f55c47" }}>
+            Join forward-thinking teams choosing Regis.AI for smarter, streamlined attendance management — built for the future, ready for you.
+          </b>
+        </p>
+        <button className="knowmore-btn" onClick={() => window.location.href = "/"}>Back to Home</button>
       </div>
     </div>
   );
