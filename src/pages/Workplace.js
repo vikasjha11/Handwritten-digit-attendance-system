@@ -23,7 +23,7 @@ function AttendanceDashboardPage() {
       key: "ai",
       icon: "🤖",
       title: "AttendIQ", 
-      desc: "Leverage advanced AI analytics to detect irregularities and ensure data integrity. Smarter, safer insights at your fingertips.", 
+      desc: "Leverage AI analytics to detect irregularities and ensure data integrity. Smarter, safer insights at your fingertips.", 
       route: "/attendiq"
     }
   ];
